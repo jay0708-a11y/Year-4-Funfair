@@ -434,6 +434,152 @@
     color: #ce93d8;
   }
 
+  /* GALLERY SECTION */
+  .gallery-section {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    padding: 0 1.5rem;
+  }
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .gallery-header h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+  }
+  .gallery-header p {
+    font-size: 1rem;
+    opacity: 0.75;
+    font-weight: 600;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .video-card {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,107,157,0.3);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+  .video-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: rgba(255,107,157,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .video-thumb iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    inset: 0;
+  }
+  .video-thumb .play-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .video-thumb .play-placeholder span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    opacity: 0.5;
+    font-family: 'Nunito', sans-serif;
+  }
+  .video-info {
+    padding: 1rem 1.2rem 1.2rem;
+  }
+  .video-team {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    color: var(--pink);
+    margin-bottom: 0.2rem;
+  }
+  .video-desc {
+    font-size: 0.82rem;
+    opacity: 0.65;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .gallery-coming-soon {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(255,255,255,0.04);
+    border: 2px dashed rgba(255,215,0,0.25);
+    border-radius: 22px;
+    margin-bottom: 1.5rem;
+  }
+  .gallery-coming-soon .big-emoji { font-size: 3.5rem; margin-bottom: 0.8rem; }
+  .gallery-coming-soon h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem;
+    color: var(--yellow);
+    margin-bottom: 0.5rem;
+  }
+  .gallery-coming-soon p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-weight: 600;
+    max-width: 380px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .drive-btn {
+    display: inline-block;
+    margin-top: 1.4rem;
+    background: linear-gradient(135deg, var(--yellow), var(--orange));
+    color: var(--dark);
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.15rem;
+    padding: 0.85rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(255,180,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .drive-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 32px rgba(255,180,0,0.45);
+  }
+  .gallery-divider {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .gallery-divider::before, .gallery-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+  .gallery-divider span {
+    font-size: 1.3rem;
+    white-space: nowrap;
+    opacity: 0.5;
+  }
+
   /* CONFETTI */
   .confetti-container {
     position: fixed;
@@ -630,6 +776,29 @@
 <div class="steps-section">
   <div class="section-title">🗺️ Your 8 Steps to Funfair Success!</div>
   <div class="steps-grid" id="stepsGrid"></div>
+</div>
+
+<!-- GALLERY DIVIDER -->
+<div class="gallery-divider">
+  <span>🎬 &nbsp; Student Commercials &nbsp; 🎬</span>
+</div>
+
+<!-- ADVERTISEMENT GALLERY -->
+<div class="gallery-section">
+  <div class="gallery-header">
+    <h2>🎬 Student Advertisement Gallery</h2>
+    <p>Watch our student-created commercials for the Year 4 Funfair!</p>
+  </div>
+
+  <div class="gallery-coming-soon">
+    <div class="big-emoji">🎬</div>
+    <h3>Watch Our Commercials!</h3>
+    <p>All student video ads live in our shared Google Drive folder. Click below to watch, upload your team's video, and see what everyone else made!</p>
+    <a href="https://drive.google.com/drive/folders/1t1QEMQtg7ZFTpgWBQ6OsaKaB79HdWoZ5?usp=drive_link" target="_blank" class="drive-btn">
+      📁 Open Video Ad Gallery
+    </a>
+    <p style="margin-top:1rem;font-size:0.78rem;opacity:0.45;">Opens in Google Drive — sign in with your school Google account</p>
+  </div>
 </div>
 
 <script>
@@ -968,3 +1137,4 @@ render();
 </script>
 </body>
 </html>
+
